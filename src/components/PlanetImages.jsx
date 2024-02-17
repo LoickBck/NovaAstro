@@ -23,7 +23,7 @@ function PlanetImages({ planetName }) {
     <Splide options={{ perPage: 3, arrows: false, pagination: false, drag: 'free', gap: '1rem' }}>
       {images.map((image, index) => (
         <SplideSlide key={index}>
-          <img className='w-full max-h-[20rem] object-cover overflow-x-hidden' src={image.links?.[0]?.href} alt={image.data?.[0]?.title} style={{ width: '100%', display: 'block' }} />
+          <img className='w-auto h-[20rem] object-cover overflow-x-hidden' src={image.links?.[0]?.href} alt={image.data?.[0]?.title} />
         </SplideSlide>
       ))}
     </Splide>

@@ -10,14 +10,23 @@ function PlanetsExplorer() {
     useEffect(() => {
         const originalPlanetData = [
             { id: 1, name: "Mercure",englishName: "Mercury", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_mercure-messenger.jpg", description: "Mercure est la planète la plus proche du Soleil. Sa surface est criblée de cratères dus aux impacts de comètes et d'astéroïdes." },
-            { id: 2, name: "Vénus",englishName: "Venus", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg", description: "Vénus est la deuxième planète du système solaire et est connue pour sa température de surface extrêmement élevée et son atmosphère riche en dioxyde de carbone." },
-            { id: 3, name: "Terre",englishName: "Earth", image: "https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/terre-1.png", description: "Notre planète natale, la Terre, est la troisième planète du Soleil et la seule connue pour abriter la vie." },
-            { id: 4, name: "Mars", image: "https://cnes.fr/sites/default/files/drupal/201607/image/is_mars.jpg", description: "Mars, souvent surnommée la planète rouge, est célèbre pour ses tempêtes de poussière et pour être la cible principale de la recherche de signes de vie passée." },
-            { id: 5, name: "Jupiter", image: "https://blog.cnes.fr/sites/default/files/styles/large/public/drupal/201811/image/je_systemesolaire_jupiter.png?itok=NN4jvZmx", description: "Jupiter est la plus grande planète du système solaire. Sa Grande Tache Rouge est une tempête plus grande que la Terre." },
-            { id: 6, name: "Saturne",englishName: "Saturn", image: "https://img-4.linternaute.com/t-8nfUAHIigqKxuilOuVZ-EzuEg=/1080x/smart/6fcce0f97f9440dcaa893edbd38aa6e2/ccmcms-linternaute/34589040.jpg", description: "Saturne est connue pour son système de anneaux magnifiques, composés principalement de glace." },
-            { id: 7, name: "Uranus", image: "https://physicsworld.com/wp-content/uploads/2020/12/PIA18182.jpg", description: "Uranus a une couleur bleu-vert due à l'atmosphère riche en méthane, et est unique pour son inclinaison extrême." },
-            { id: 8, name: "Neptune",englishName: "Neptune", image: "https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2021/09/3-decouvertes-sur-neptune-ses-lunes.jpg", description: "Neptune est connue pour ses vents extrêmement rapides et a été la première planète localisée à travers des prédictions mathématiques." },
-            { id: 9, name: "Soleil",englishName: "Sun", image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Solar_prominence_from_STEREO_spacecraft_September_29%2C_2008.jpg", description: "Le Soleil est l'étoile au centre de notre système solaire, une gigantesque sphère de gaz brûlant principalement composée d'hydrogène et d'hélium." },
+
+            { id: 2, name: "Vénus",englishName: "Venus", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg",},
+
+            { id: 3, name: "Terre",englishName: "Earth", image: "https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/terre-1.png", },
+
+            { id: 4, name: "Mars", image: "https://cnes.fr/sites/default/files/drupal/201607/image/is_mars.jpg", },
+
+            { id: 5, name: "Jupiter", image: "https://blog.cnes.fr/sites/default/files/styles/large/public/drupal/201811/image/je_systemesolaire_jupiter.png?itok=NN4jvZmx",},
+
+            { id: 6, name: "Saturne",englishName: "Saturn", image: "https://img-4.linternaute.com/t-8nfUAHIigqKxuilOuVZ-EzuEg=/1080x/smart/6fcce0f97f9440dcaa893edbd38aa6e2/ccmcms-linternaute/34589040.jpg",},
+
+            { id: 7, name: "Uranus", image: "https://physicsworld.com/wp-content/uploads/2020/12/PIA18182.jpg",  },
+
+            { id: 8, name: "Neptune",englishName: "Neptune", image: "https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2021/09/3-decouvertes-sur-neptune-ses-lunes.jpg",},
+
+            { id: 9, name: "Soleil",englishName: "Sun", image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Solar_prominence_from_STEREO_spacecraft_September_29%2C_2008.jpg",},
+
         ];
 
         
