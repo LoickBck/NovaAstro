@@ -6,8 +6,8 @@ import React from 'react'
 function Home() {
   return (
     <div>
-        <Vegan />
         <MostLoved />
+        <Vegan />
     </div>
     // J'appelle mes composants dans la section Home
   )
