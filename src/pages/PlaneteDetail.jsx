@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import PlanetImages from '../components/PlanetImages';
-import { getPlanetFacts } from '../components/Facts'; // Ajustez le chemin d'importation
+import { getPlanetFacts } from '../components/Facts';
 
 function PlanetDetail() {
     // Récupération du nom de la planète de l'URL ou de l'état de navigation
@@ -10,7 +10,7 @@ function PlanetDetail() {
     const planetName = params.planetName; // Si le nom de la planète est dans l'URL
     const { englishName } = location.state || {}; // Si englishName est passé via l'état de navigation
     
-    // Utilisez getPlanetFacts pour récupérer les informations de la planète
+    //getPlanetFacts pour récupérer les informations de la planète
     const { description, funFacts } = getPlanetFacts(planetName);
 
     return (
@@ -22,7 +22,7 @@ function PlanetDetail() {
                     <table className="min-w-full leading-normal">
                         <thead>
                             <tr>
-                                <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-800 text-left text-xs font-semibold text-gray-100 uppercase tracking-wider">
+                                <th className="px-5 py-3 border-b-2 border-gray-900 bg-gray-900 text-left text-xs font-semibold text-gray-100 uppercase tracking-wider">
                                     Faits Intéressants
                                 </th>
                             </tr>
@@ -30,7 +30,7 @@ function PlanetDetail() {
                         <tbody>
                             {funFacts.map((fact, index) => (
                                 <tr key={index}>
-                                    <td className="px-5 py-2 border-b border-gray-200 bg-white text-sm">
+                                    <td className="px-5 py-2 border border-gray-800 text-sm">
                                         {fact}
                                     </td>
                                 </tr>

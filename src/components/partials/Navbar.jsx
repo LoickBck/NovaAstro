@@ -47,13 +47,13 @@ function Navbar() {
     
 
     return (
-        <div className="bg-gray-100">
-            <div className="fixed top-0 left-0 w-full z-50 bg-white shadow">
+        <div className="bg-white">
+            <div className="fixed top-0 left-0 w-full z-50 bg-black shadow">
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
                     <Link to="/">
                     <h1 className="text-xl font-semibold">Nova Astro</h1>
                     </Link>
-                    <button onClick={toggleSidebar} className="text-gray-500 hover:text-gray-600 focus:outline-none">
+                    <button onClick={toggleSidebar} className="text-indigo-400 hover:text-indigo-200 focus:outline-none">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
@@ -78,6 +78,7 @@ function Navbar() {
                                 </ul>
                             )}
                         </li>
+                        <li className="mb-3"><Link to="/nova" className="block hover:text-indigo-400">Nova</Link></li>
                         <li className="mb-3"><Link to="/contact" className="block hover:text-indigo-400">Contact</Link></li>
                     </ul>
                 </div>
