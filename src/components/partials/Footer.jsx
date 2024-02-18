@@ -9,7 +9,7 @@ function Footer() {
         <div className="mx-6 pt-8 pb-4 text-center">
 
         <div className="mb-6">
-        <h5 className="mb-2 font-bold uppercase">EXPLORER NOTRE ESPACE</h5>
+        <h5 className="mb-2 font-bold uppercase">explorer notre espace</h5>
 
         <p className="mb-4">
         Embarquez pour l'aventure de votre vie et découvrez des secrets cachés
