@@ -1,5 +1,3 @@
-import React from 'react';
-
 const planetFacts = {
     Mercure: {
         description: "Mercure est la sentinelle du système solaire, orbitant le plus près du Soleil. Cette proximité solaire confère à Mercure des températures diurnes extrêmes, tandis que son absence d'atmosphère significative permet une chute drastique de la température la nuit. La surface de Mercure est criblée de cratères similaires à ceux de la Lune, témoignant de son histoire géologique violente. Malgré sa petite taille, Mercure cache des mystères, comme la présence de glace d'eau dans ses cratères polaires, défiant les attentes dans un environnement si proche du Soleil.",
@@ -58,7 +56,7 @@ const planetFacts = {
         ]
       },
       Neptune: {
-        description: "Neptune est connue pour ses vents extrêmement rapides, certains des plus rapides du système solaire.",
+        description: "Neptune, le géant bleu, veille aux confins du système solaire, mystérieuse et lointaine. Découverte en 1846 grâce à des prédictions mathématiques, cette planète a révélé un monde de vents furieux et de tempêtes gigantesques, avec des vitesses de vent dépassant les 2 000 km/h, les plus rapides du système solaire. Son atmosphère, riche en hydrogène, hélium et traces de méthane, donne à Neptune sa couleur bleue caractéristique. Neptune est entourée d'un système complexe d'anneaux et de 14 lunes connues, avec Triton, une lune géologiquement active qui crache des geysers de gaz froid. Voyager 2, lors de son survol en 1989, a offert un aperçu rare de ce monde distant, révélant un planète fascinante et dynamique, sculptée par des forces atmosphériques extrêmes et la gravité de ses voisins.        ",
         funFacts: [
           "Neptune a été la première planète localisée à travers des prédictions mathématiques plutôt que par observation directe.",
           "Elle possède 14 lunes connues, Triton étant la plus grande et la seule grande lune du système solaire à avoir une orbite rétrograde.",
@@ -66,7 +64,7 @@ const planetFacts = {
         ]
       },
       Soleil: {
-        description: "Le Soleil est l'étoile au centre de notre système solaire, une gigantesque sphère de gaz brûlant principalement composée d'hydrogène et d'hélium.",
+        description: "Le Soleil, une étoile de type naine jaune, est le cœur battant de notre système solaire, fournissant la lumière et l'énergie nécessaires pour soutenir la vie sur Terre. Cette gigantesque sphère de plasma, composée principalement d'hydrogène et d'hélium, transforme ces éléments en énergie par le processus de fusion nucléaire. Le Soleil ne brille pas seulement; il joue un rôle crucial dans la dynamique du climat terrestre et influence profondément les phénomènes astronomiques au sein du système solaire. Les éruptions solaires et les éjections de masse coronale sont des témoins de son activité magnétique tumultueuse, ayant des répercussions jusqu'aux confins du système solaire. Observé à travers les âges, le Soleil est à la fois source d'inspiration et objet d'étude scientifique, continuant de révéler les secrets de son fonctionnement interne et de son impact sur notre environnement spatial.",
         funFacts: [
           "Le Soleil contient 99,86% de la masse totale du système solaire.",
           "Il mesure environ 109 fois le diamètre de la Terre et environ un million de Terres pourraient tenir à l'intérieur du Soleil.",
@@ -86,21 +84,4 @@ export function getPlanetFacts(planetName) {
     }
     return data;
   }
-  
-    
 
-function DescriptionEtFunFacts({ description, funFacts }) {
-  return (
-    <div>
-      <p>{description}</p>
-      <h3>Fun Facts:</h3>
-      <ul>
-        {funFacts.map((fact, index) => (
-          <li key={index}>{fact}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default DescriptionEtFunFacts;

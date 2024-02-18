@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
+import { ImSpinner9 } from "react-icons/im";
 
 function MissionsSpaciales() {
     const [missions, setMissions] = useState([]);
@@ -15,11 +16,11 @@ function MissionsSpaciales() {
         fetchMissionsData();
     }, []);
 
-    if (!missions.length) return <div>Chargement des données de mission...</div>;
+    if (!missions.length) return <div className='text-center text-2xl mt-10'>Chargement des données de mission...<ImSpinner9 className='animate-spin ml-4' /></div>;
 
     return (
-        <div className='mt-20'>
-            <h2 className='text-2xl ml-10 mb-8'>Dernières images de la mission Mars Rovers</h2>
+        <div className='m-16'>
+            <h2 className='text-2xl mb-8'>Dernières images de la mission Mars Rovers</h2>
             <Splide options={{ perPage: 2,arrows: false, pagination: false, drag: 'free', rewind: true, width: '100%', }}>
                 {missions.map((mission) => (
                     <SplideSlide key={mission.id}>

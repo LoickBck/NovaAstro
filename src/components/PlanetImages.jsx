@@ -20,6 +20,7 @@ function PlanetImages({ planetName }) {
   }
 
   return (
+    <div className='m-16'>
     <Splide options={{ perPage: 3, arrows: false, pagination: false, drag: 'free', gap: '1rem' }}>
       {images.map((image, index) => (
         <SplideSlide key={index}>
@@ -27,6 +28,7 @@ function PlanetImages({ planetName }) {
         </SplideSlide>
       ))}
     </Splide>
+    </div>
   );
 }
 

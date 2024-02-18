@@ -34,7 +34,7 @@ function PlanetsExplorer() {
     }, []);
 
     return (
-        <div className="m-16">
+        <div className="m-16 mt-24">
             <h3 className="text-2xl mb-12">Explorez le Système Solaire</h3>
             <Splide options={{ perPage: 3, arrows: false, pagination: false, drag: 'free', gap: '5rem' }}>
                 {planets.map((planet) => (
@@ -44,7 +44,7 @@ function PlanetsExplorer() {
                             <div className="p-5">
                                 <h5 className="mb-8 text-2xl font-bold text-center text-gray-600">{planet.name}</h5>
                                     <Link 
-                                    className="flex justify-center items-center mx-24 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300" 
+                                    className="flex justify-center items-center mx-24 px-3 py-2 text-sm font-medium text-center text-white bg-indigo-500 rounded-lg hover:bg-indigo-400 focus:ring-4 focus:outline-none focus:ring-blue-300" 
                                     to={`/planets/${planet.name}`}
                                     state={{ englishName: planet.englishName }}
                                     >
