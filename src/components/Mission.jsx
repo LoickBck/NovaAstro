@@ -21,7 +21,7 @@ function MissionsSpaciales() {
     return (
         <div className='m-16'>
             <h2 className='text-2xl mb-8'>Dernières images de la mission Mars Rovers</h2>
-            <Splide options={{ perPage: 2,arrows: false, pagination: false, drag: 'free', rewind: true, width: '100%', }}>
+            <Splide options={{ perPage: 2,arrows: true, pagination: false, drag: 'free', rewind: true, width: '100%', }}>
                 {missions.map((mission) => (
                     <SplideSlide key={mission.id}>
                         <div className='m-4'>

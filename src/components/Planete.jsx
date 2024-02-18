@@ -36,7 +36,7 @@ function PlanetsExplorer() {
     return (
         <div className="m-16 mt-24">
             <h3 className="text-2xl mb-12">Explorez le Système Solaire</h3>
-            <Splide options={{ perPage: 3, arrows: false, pagination: false, drag: 'free', gap: '5rem' }}>
+            <Splide options={{ perPage: 3, arrows: true, pagination: false, drag: 'free', gap: '5rem' }}>
                 {planets.map((planet) => (
                     <SplideSlide key={planet.id}>
                         <div className="mt-10 min-h-96 mb-10 hover:scale-110 bg-white border border-gray rounded-lg shadow-xl">
