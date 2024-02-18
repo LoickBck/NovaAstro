@@ -11,4 +11,4 @@ Design à améliorer
 
 2 : Trouver une bonne configuration pour les images d'une planète ou de la mission Mars Rovers , car il y a beaucoup d'images.
 
-3 : Changement d'API (spoonacular initialement) car l'API permettait de faire 150 requêtes par jour, l'API de la NASA permet d'en faire 1000 par heures gratuitement.
+3 : Changement d'API (spoonacular initialement) car l'API permettait de faire 150 requêtes par jour, l'API de la NASA permet d'en faire 1000 par heure gratuitement.
