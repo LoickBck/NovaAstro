@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaSpaceShuttle } from "react-icons/fa";
 
 function Navbar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -7,15 +8,15 @@ function Navbar() {
     const sidebarRef = useRef(null);
 
     const planets = [
-        { name: "Mercure", path: "/planets/Mercure" },
-        { name: "Vénus", path: "/planets/Venus" },
-        { name: "Terre", path: "/planets/Terre" },
-        { name: "Uranus", path: "/planets/Uranus" },
-        { name: "Mars", path: "/planets/Mars" },
-        { name: "Jupiter", path: "/planets/Jupiter" },
-        { name: "Saturne", path: "/planets/Saturne" },
-        { name: "Neptune", path: "/planets/Neptune" },
-        { name: "Soleil", path: "/planets/Soleil" },
+        { name: "Mercure", path: "/planets/Mercure",image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_mercure-messenger.jpg" },
+        { name: "Vénus", path: "/planets/Venus",image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg" },
+        { name: "Terre", path: "/planets/Terre",image: "https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/terre-1.png" },
+        { name: "Uranus", path: "/planets/Uranus", image: "https://physicsworld.com/wp-content/uploads/2020/12/PIA18182.jpg" },
+        { name: "Mars", path: "/planets/Mars", image: "https://cnes.fr/sites/default/files/drupal/201607/image/is_mars.jpg" },
+        { name: "Jupiter", path: "/planets/Jupiter", image: "https://blog.cnes.fr/sites/default/files/styles/large/public/drupal/201811/image/je_systemesolaire_jupiter.png?itok=NN4jvZmx" },
+        { name: "Saturne", path: "/planets/Saturne", image: "https://img-4.linternaute.com/t-8nfUAHIigqKxuilOuVZ-EzuEg=/1080x/smart/6fcce0f97f9440dcaa893edbd38aa6e2/ccmcms-linternaute/34589040.jpg" },
+        { name: "Neptune", path: "/planets/Neptune", image: "https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2021/09/3-decouvertes-sur-neptune-ses-lunes.jpg" },
+        { name: "Soleil", path: "/planets/Soleil", image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Solar_prominence_from_STEREO_spacecraft_September_29%2C_2008.jpg" },
     ];
 
     const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
@@ -67,12 +68,15 @@ function Navbar() {
                     <ul className="mt-6">
                         <li className="mb-3"><Link to="/" className="block hover:text-indigo-400">Home</Link></li>
                         <li className="mb-3">
-                            <button onClick={togglePlanetsMenu} className="block hover:text-indigo-400 w-full text-left">Planètes</button>
+                            <div className='flex flex-row hover:text-indigo-400 w-full text-left items-center'>
+                            <button onClick={togglePlanetsMenu} className="block">Planètes</button>
+                            <FaSpaceShuttle className='ml-2' />
+                            </div>
                             {isPlanetsMenuOpen && (
                                 <ul className="mt-2">
                                     {planets.map((planet, index) => (
                                         <li key={index} className="mb-2">
-                                            <Link to={planet.path} className="block hover:text-indigo-400 pl-4">{planet.name}</Link>
+                                            <Link state={{imageUrl: planet.image }} to={planet.path} className="block hover:text-indigo-400 pl-4">{planet.name}</Link>
                                         </li>
                                     ))}
                                 </ul>

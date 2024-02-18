@@ -17,8 +17,8 @@ function PDJ() {
     if (!pdj) return <div className='text-center text-3xl mt-10 ' >Chargement de la photo du jour...<ImSpinner9 className='animate-spin ml-4' /></div>;
 
     return (
-        <div className='bg-white pt-8'>
-        <div className="m-16 text-black">
+        <div className='pt-8'>
+        <div className="m-16">
             <h2 className='text-2xl mb-10 '>Photo du jour</h2>
             <p className='text-lg font-medium text-center '>Chaque jour, l'univers nous révèle une nouvelle merveille : découvrez la beauté et l'immensité cosmique à travers la Photo du Jour de la NASA, une fenêtre ouverte sur les mystères de l'espace.</p>
             <div className='flex justify-center mt-10 mx-10'>

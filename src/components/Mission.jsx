@@ -26,7 +26,7 @@ function MissionsSpaciales() {
                     <SplideSlide key={mission.id}>
                         <div className='m-4'>
                             <img className='w-full max-h-[20rem] object-cover overflow-x-hidden' src={mission.img_src} alt="Mission spatiale" />
-                            <p className='text-center text-gray-800'>{mission.earth_date}</p>
+                            <p className='text-center text-gray-200'>{mission.earth_date}</p>
                         </div>
                     </SplideSlide>
                 ))}

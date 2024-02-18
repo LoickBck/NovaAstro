@@ -8,7 +8,7 @@ function PlanetDetail() {
     const params = useParams();
     const location = useLocation();
     const planetName = params.planetName; // Si le nom de la planète est dans l'URL
-    const { englishName } = location.state || {}; // Si englishName est passé via l'état de navigation
+    const { englishName , imageUrl } = location.state || {};
     
     //getPlanetFacts pour récupérer les informations de la planète
     const { description, funFacts } = getPlanetFacts(planetName);
@@ -16,7 +16,10 @@ function PlanetDetail() {
     return (
         <div>
             <h1 className='text-center text-4xl mt-20'>{planetName}</h1>
-            <p className='text-center text-lg mt-4 mx-16'>{description}</p>
+            <div className="flex justify-center my-4">
+                <img src={imageUrl} alt={`Planete :  ${planetName}`} className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
+            </div>
+            <p className='text-center text-lg mt-4 mx-64'>{description}</p>
             <div className="flex flex-col items-center mt-12">
                 <div className="w-full max-w-5xl">
                     <table className="min-w-full leading-normal">

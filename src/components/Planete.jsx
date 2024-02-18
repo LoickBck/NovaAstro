@@ -41,17 +41,16 @@ function PlanetsExplorer() {
                     <SplideSlide key={planet.id}>
                         <div className="mt-10 min-h-96 mb-10 hover:scale-110 bg-white border border-gray rounded-lg shadow-xl">
                             <img className="rounded-t-lg w-full h-full object-cover" src={planet.image} alt={planet.name} />
-                            <div className="p-5">
-                                <h5 className="mb-8 text-2xl font-bold text-center text-gray-600">{planet.name}</h5>
+                            <div className="bg-black rounded-b-lg p-5">
+                                <h5 className="mb-8 text-2xl font-bold text-center text-gray-200">{planet.name}</h5>
                                     <Link 
-                                    className="flex justify-center items-center mx-24 px-3 py-2 text-sm font-medium text-center text-white bg-indigo-500 rounded-lg hover:bg-indigo-400 focus:ring-4 focus:outline-none focus:ring-blue-300" 
+                                    className="flex justify-center items-center mx-24 text-sm font-medium text-center bg-transparent hover:bg-indigo-400 text-indigo-400 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-indigo-400 hover:border-transparent" 
                                     to={`/planets/${planet.name}`}
-                                    state={{ englishName: planet.englishName }}
+                                    state={{ englishName: planet.englishName, imageUrl: planet.image }}
                                     >
                                     Explorez
                                     <FaArrowRight className="ml-2" />
                                     </Link>
-                                    {/* J'ai du mettre un state planet.englishName car avec les noms en français les requêtes vers l'api n'étaient pas toutes correctes (exemple pour soleil je n'avais pas de photo) */}
                                 </div>
                             </div>
                     </SplideSlide>

@@ -14,7 +14,7 @@ function Contact() {
             <div className="mb-5">
                 <label
                 for="name"
-                className="mb-3 block text-base font-medium text-blue-700"
+                className="mb-3 block text-base font-medium text-indigo-400"
                 >
                 Nom Complet
                 </label>
@@ -29,7 +29,7 @@ function Contact() {
             <div className="mb-5">
                 <label
                 for="email"
-                className="mb-3 block text-base font-medium text-blue-700"
+                className="mb-3 block text-base font-medium text-indigo-400"
                 >
                 Mail
                 </label>
@@ -44,7 +44,7 @@ function Contact() {
             <div className="mb-5">
                 <label
                 for="subject"
-                className="mb-3 block text-base font-medium text-blue-700"
+                className="mb-3 block text-base font-medium text-indigo-400"
                 >
                 Objet
                 </label>
@@ -59,7 +59,7 @@ function Contact() {
             <div className="mb-5">
                 <label
                 for="message"
-                className="mb-3 block text-base font-medium text-blue-700"
+                className="mb-3 block text-base font-medium text-indigo-400"
                 >
                 Message
                 </label>
@@ -73,7 +73,7 @@ function Contact() {
             </div>
             <div>
                 <button
-                className="hover:shadow-form rounded-md bg-indigo-400 py-3 px-8 text-base font-semibold text-white outline-none"
+                className="bg-transparent hover:bg-indigo-400 text-indigo-400 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-indigo-400 hover:border-transparent"
                 >
                 Envoyer
                 </button>
