@@ -30,6 +30,12 @@ function Navbar() {
         }
     };
 
+    // Fonction pour gérer le clic sur les liens
+    const handleLinkClick = () => {
+        setIsSidebarOpen(false); // Ferme la sidebar
+        setIsPlanetsMenuOpen(false); // Ferme le sous-menu des planètes, si nécessaire
+    };
+
     useEffect(() => {
         const handler = () => {
             if (!isSidebarOpen) {
@@ -66,7 +72,7 @@ function Navbar() {
                 <div className="p-5">
                     <h2 className="text-2xl font-semibold">Nova - Menu</h2>
                     <ul className="mt-6">
-                        <li className="mb-3"><Link to="/" className="block hover:text-indigo-400">Home</Link></li>
+                        <li className="mb-3"><Link onClick={handleLinkClick} to="/" className="block hover:text-indigo-400">Home</Link></li>
                         <li className="mb-3">
                             <div className='flex flex-row hover:text-indigo-400 w-full text-left items-center'>
                             <button onClick={togglePlanetsMenu} className="block">Planètes</button>
@@ -76,14 +82,14 @@ function Navbar() {
                                 <ul className="mt-2">
                                     {planets.map((planet, index) => (
                                         <li key={index} className="mb-2">
-                                            <Link state={{imageUrl: planet.image }} to={planet.path} className="block hover:text-indigo-400 pl-4">{planet.name}</Link>
+                                            <Link onClick={handleLinkClick} state={{imageUrl: planet.image }} to={planet.path} className="block hover:text-indigo-400 pl-4">{planet.name}</Link>
                                         </li>
                                     ))}
                                 </ul>
                             )}
                         </li>
-                        <li className="mb-3"><Link to="/nova" className="block hover:text-indigo-400">Nova</Link></li>
-                        <li className="mb-3"><Link to="/contact" className="block hover:text-indigo-400">Contact</Link></li>
+                        <li className="mb-3"><Link onClick={handleLinkClick} to="/nova" className="block hover:text-indigo-400">Nova</Link></li>
+                        <li className="mb-3"><Link onClick={handleLinkClick} to="/contact" className="block hover:text-indigo-400">Contact</Link></li>
                     </ul>
                 </div>
             </div>

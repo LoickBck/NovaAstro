@@ -23,7 +23,7 @@ function Contact() {
                 name="name"
                 id="name"
                 placeholder="Eerling Haaland"
-                className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-300 outline-none focus:border-indigo-400 focus:shadow-md"
+                className="w-full rounded-md border border-gray-300 bg-black py-3 px-6 text-base font-medium text-gray-300 outline-none focus:border-indigo-400 focus:shadow-md"
                 />
             </div>
             <div className="mb-5">
@@ -38,7 +38,7 @@ function Contact() {
                 name="email"
                 id="email"
                 placeholder="messivoleur@ballondor.com"
-                className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-300 outline-none focus:border-indigo-400 focus:shadow-md"
+                className="w-full rounded-md border border-gray-300 bg-black py-3 px-6 text-base font-medium text-gray-300 outline-none focus:border-indigo-400 focus:shadow-md"
                 />
             </div>
             <div className="mb-5">
@@ -53,7 +53,7 @@ function Contact() {
                 name="subject"
                 id="subject"
                 placeholder="Objet de la demande"
-                className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-300 outline-none focus:border-indigo-400 focus:shadow-md"
+                className="w-full rounded-md border border-gray-300 bg-black py-3 px-6 text-base font-medium text-gray-300 outline-none focus:border-indigo-400 focus:shadow-md"
                 />
             </div>
             <div className="mb-5">
@@ -68,7 +68,7 @@ function Contact() {
                 name="message"
                 id="message"
                 placeholder="Écrivez votre message"
-                className="w-full resize-none rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-800 outline-none focus:border-indigo-400 focus:shadow-md"
+                className="w-full resize-none rounded-md border bg-black border-gray-300 py-3 px-6 text-base font-medium text-gray-300 outline-none focus:border-indigo-400 focus:shadow-md"
                 ></textarea>
             </div>
             <div>
