@@ -7,7 +7,7 @@ const planetFacts = {
           "Mercure possède un champ magnétique, ce qui est inhabituel pour une petite planète."
         ]
       },
-      Vénus: {
+      Venus: {
         description: "Vénus, surnommée l'étoile du berger, brille le plus brillamment dans notre ciel nocturne après la Lune, grâce à son épaisse couverture nuageuse réfléchissante. Sous cette beauté se cache cependant un monde de conditions extrêmes, avec une pression atmosphérique écrasante et la température de surface la plus élevée du système solaire. Les montagnes et les plaines de lave racontent l'histoire géologique tumultueuse de Vénus, tandis que les récentes découvertes suggèrent que Vénus aurait pu abriter de l'eau liquide et, par extension, des conditions propices à la vie dans son passé lointain.",
         funFacts: [
           "Une journée sur Vénus est plus longue qu'une année vénusienne.",

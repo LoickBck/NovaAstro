@@ -9,9 +9,9 @@ function PlanetsExplorer() {
 
     useEffect(() => {
         const originalPlanetData = [
-            { id: 1, name: "Mercure",englishName: "Mercury", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_mercure-messenger.jpg", description: "Mercure est la planète la plus proche du Soleil. Sa surface est criblée de cratères dus aux impacts de comètes et d'astéroïdes." },
+            { id: 1, name: "Mercure",englishName: "Mercury", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_mercure-messenger.jpg", },
 
-            { id: 2, name: "Vénus",englishName: "Venus", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg",},
+            { id: 2, name: "Venus",englishName: "Venus", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg",},
 
             { id: 3, name: "Terre",englishName: "Earth", image: "https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/terre-1.png", },
 

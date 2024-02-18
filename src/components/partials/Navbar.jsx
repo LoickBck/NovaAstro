@@ -8,7 +8,7 @@ function Navbar() {
 
     const planets = [
         { name: "Mercure", path: "/planets/Mercure" },
-        { name: "Vénus", path: "/planets/Vénus" },
+        { name: "Vénus", path: "/planets/Venus" },
         { name: "Terre", path: "/planets/Terre" },
         { name: "Uranus", path: "/planets/Uranus" },
         { name: "Mars", path: "/planets/Mars" },
