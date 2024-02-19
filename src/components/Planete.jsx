@@ -10,15 +10,15 @@ function PlanetsExplorer() {
 
     useEffect(() => {
         const originalPlanetData = [
-            { id: 1, name: "Mercure",englishName: "Mercury", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_mercure-messenger.jpg", gif : "https://i.pinimg.com/originals/d7/aa/19/d7aa1904f0b961caef4e85eb0d38120b.gif" },
+            { id: 1, name: "Mercure",englishName: "Mercury", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_mercure-messenger.jpg",},
 
-            { id: 2, name: "Venus",englishName: "Venus", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg", gif : "https://i.pinimg.com/originals/c5/b3/cc/c5b3cc8ad7bba4a5693bf44a4e93b6d3.gif"},
+            { id: 2, name: "Venus",englishName: "Venus", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg",},
 
-            { id: 3, name: "Terre",englishName: "Earth", image: "https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/terre-1.png", gif : "https://cdn.pixabay.com/animation/2022/11/13/07/16/07-16-41-513_512.gif" },
+            { id: 3, name: "Terre",englishName: "Earth", image: "https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/terre-1.png", },
 
-            { id: 4, name: "Mars", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mars_Valles_Marineris_EDIT.jpg/1200px-Mars_Valles_Marineris_EDIT.jpg", gif : "https://i.makeagif.com/media/3-30-2017/__C4P2.gif" },
+            { id: 4, name: "Mars", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mars_Valles_Marineris_EDIT.jpg/1200px-Mars_Valles_Marineris_EDIT.jpg",},
 
-            { id: 5, name: "Jupiter", image: "https://blog.cnes.fr/sites/default/files/styles/large/public/drupal/201811/image/je_systemesolaire_jupiter.png?itok=NN4jvZmx", gif : "https://gifdb.com/images/high/universe-planet-jupiter-moon-3il50dr6r25gesvs.gif"},
+            { id: 5, name: "Jupiter", image: "https://blog.cnes.fr/sites/default/files/styles/large/public/drupal/201811/image/je_systemesolaire_jupiter.png?itok=NN4jvZmx",},
 
             { id: 6, name: "Saturne",englishName: "Saturn", image: "https://pop.h-cdn.co/assets/17/38/1600x1600/square-1505749836-cassini-header.jpg",},
 

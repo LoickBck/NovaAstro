@@ -60,12 +60,12 @@ function Navbar() {
             <div className="fixed top-0 left-0 w-full z-50 bg-black shadow">
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
                     <Link to="/" className='flex flex-row items-center'>
-                        <h1 className="text-xl font-semibold text-white">Nova Astro</h1>
+                        <h1 className="text-xl font-semibold text-white flex flex-row"><p className='text-indigo-400'>Nova</p> Astro</h1>
                         <IoMdPlanet className='text-2xl ml-2' />
                     </Link>
-                    <div className="relative">
+                    <div className="-mt-4">
                 <button onClick={toggleSidebar} className="z-50 focus:outline-none">
-                    <div className="relative w-10 h-6 flex flex-col justify-between items-center mx-auto">
+                    <div className="w-10 h-6 flex flex-col justify-between items-center mx-auto">
                         {/* Barre du haut */}
                         <div className={`h-1 w-[80%] bg-white transform transition duration-500 ease-in-out ${isSidebarOpen ? "rotate-45 translate-y-2.5" : "-translate-y-0.5"}`}></div>
                         {/* Barre du milieu */}

@@ -1,6 +1,7 @@
 import Planete from "../components/Planete";
 import PhotoDuJour from "../components/PhotoDuJour";
 import Mission from "../components/Mission";
+import Recherche from "../components/Recherche";
 import React from 'react'
 import { motion } from 'framer-motion'
 
@@ -13,6 +14,7 @@ function Home() {
     transition={{duration: 2}}
     >
         <Planete />
+        <Recherche />
         <PhotoDuJour />
         <Mission />
     </motion.div>
