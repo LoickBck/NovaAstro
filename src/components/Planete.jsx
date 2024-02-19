@@ -40,17 +40,31 @@ function PlanetsExplorer() {
             initial={{opacity: 0}}
             exit={{opacity: 0}}
             transition={{duration: 0.5}}
-        className="m-16 mt-24">
+        className="xs:m-4 md:m-16 xs:mt-24">
             <h3 className="text-2xl mb-12">Explorez le Système Solaire</h3>
-            <Splide options={{ perPage: 3, arrows: true, pagination: false, drag: 'free', gap: '5rem' }}>
+            <Splide options={{ 
+                perPage: 3, 
+                arrows: true, 
+                pagination: false, 
+                drag: 'free', 
+                gap: '5rem',
+                breakpoints: {
+                    280: { perPage: 1 }, // xs
+                    640: { perPage: 1 }, // sm
+                    768: { perPage: 1 }, // md
+                    1024: { perPage: 2 }, // lg
+                    1280: { perPage: 3 }, // xl
+                    1536: { perPage: 3 }, // 2xl
+                }
+            }}>
                 {planets.map((planet) => (
                     <SplideSlide key={planet.id}>
-                        <div className="mt-10 min-h-96 mb-10 hover:scale-110 bg-white border border-gray rounded-lg shadow-xl">
+                        <div className="mt-10 min-h-96 mb-10 hover:scale-110 border border-indigo-400 rounded-lg shadow-xl">
                             <img className="rounded-t-lg w-full h-full object-cover" src={planet.image} alt={planet.name} />
                             <div className="bg-black rounded-b-lg p-5">
                                 <h5 className="mb-8 text-2xl font-bold text-center text-gray-200">{planet.name}</h5>
                                     <Link 
-                                    className="flex justify-center items-center mx-24 text-sm font-medium text-center bg-transparent hover:bg-indigo-400 text-indigo-400 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-indigo-400 hover:border-transparent" 
+                                    className="flex justify-center xs:mx-4 md:mx-10 xl:mx-16 lg:mx-12 items-center text-sm font-medium text-center bg-transparent hover:bg-indigo-400 text-indigo-400 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-indigo-400 hover:border-transparent" 
                                     to={`/planets/${planet.name}`}
                                     state={{ englishName: planet.englishName, imageUrl: planet.image }}
                                     >

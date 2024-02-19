@@ -67,11 +67,11 @@ function Navbar() {
                 <button onClick={toggleSidebar} className="z-50 focus:outline-none">
                     <div className="w-10 h-6 flex flex-col justify-between items-center mx-auto">
                         {/* Barre du haut */}
-                        <div className={`h-1 w-[80%] bg-white transform transition duration-500 ease-in-out ${isSidebarOpen ? "rotate-45 translate-y-2.5" : "-translate-y-0.5"}`}></div>
+                        <div className={`h-1 w-[80%] bg-indigo-400 transform transition duration-500 ease-in-out ${isSidebarOpen ? "rotate-45 translate-y-2.5" : "-translate-y-0.5"}`}></div>
                         {/* Barre du milieu */}
-                        <div className={`h-1 w-[80%] bg-white transform transition duration-500 ease-in-out ${isSidebarOpen ? "opacity-0" : "opacity-100"}`}></div>
+                        <div className={`h-1 w-[80%] bg-indigo-400 transform transition duration-500 ease-in-out ${isSidebarOpen ? "opacity-0" : "opacity-100"}`}></div>
                         {/* Barre du bas */}
-                        <div className={`h-1 w-[80%] bg-white transform transition duration-500 ease-in-out ${isSidebarOpen ? "-rotate-45 -translate-y-2.5" : "translate-y-0.5"}`}></div>
+                        <div className={`h-1 w-[80%] bg-indigo-400 transform transition duration-500 ease-in-out ${isSidebarOpen ? "-rotate-45 -translate-y-2.5" : "translate-y-0.5"}`}></div>
                     </div>
                 </button>
                     </div>

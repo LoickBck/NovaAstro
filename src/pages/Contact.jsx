@@ -11,7 +11,7 @@ function Contact() {
     transition={{duration: 2}}
     >
         <div className='flex flex-row items-center ml-20'>
-            <h1 className='flex flex-row items-center ml-20 text-4xl font-medium'>Contact</h1>
+            <h1 className='flex flex-row items-center xs:-ml-8 sm:ml-8 md:ml-20 text-4xl font-medium'>Contact</h1>
             <MdMailOutline className='ml-4 text-5xl' />
         </div>
         <div className="flex flex-col items-center justify-center p-12">

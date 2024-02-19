@@ -15,7 +15,7 @@ const nameMapping = {
   "Soleil": "Sun",
 };
 
-function PlanetImages({ planetName }) {
+function PlaneteImages({ planetName }) {
   const [images, setImages] = useState([]);
   const [error, setError] = useState(null); // État pour gérer les erreurs
 
@@ -47,8 +47,22 @@ function PlanetImages({ planetName }) {
   }
 
   return (
-    <div className='m-16'>
-      <Splide options={{ perPage: 3, arrows: true, pagination: false, drag: 'free', gap: '1rem' }}>
+    <div className='xs:m-4 md:m-16'>
+      <Splide options={{ 
+                perPage: 3, 
+                arrows: true, 
+                pagination: false, 
+                drag: 'free', 
+                gap: '1rem',
+                breakpoints: {
+                    280: { perPage: 1 }, // xs
+                    640: { perPage: 1 }, // sm
+                    768: { perPage: 1 }, // md
+                    1024: { perPage: 2 }, // lg
+                    1280: { perPage: 3 }, // xl
+                    1536: { perPage: 3 }, // 2xl
+                }
+            }}>
         {images.map((image, index) => (
           <SplideSlide key={index}>
             <img className='w-auto h-[20rem] object-cover overflow-x-hidden' src={image.links?.[0]?.href} alt={image.data?.[0]?.title} />
@@ -59,4 +73,4 @@ function PlanetImages({ planetName }) {
   );
 }
 
-export default PlanetImages;
+export default PlaneteImages;

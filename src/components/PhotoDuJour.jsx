@@ -18,13 +18,13 @@ function PDJ() {
 
     return (
         <div className='pt-8'>
-        <div className="m-16">
+        <div className="xs:m-4 md:m-16">
             <h2 className='text-2xl mb-10 '>Photo du jour</h2>
-            <p className='text-lg font-medium text-center '>Chaque jour, l'univers nous révèle une nouvelle merveille : découvrez la beauté et l'immensité cosmique à travers la Photo du Jour de la NASA, une fenêtre ouverte sur les mystères de l'espace.</p>
+            <p className='xs:text-md midxs:text-lg font-medium text-center '>Chaque jour, l'univers nous révèle une nouvelle merveille : découvrez la beauté et l'immensité cosmique à travers la Photo du Jour de la NASA, une fenêtre ouverte sur les mystères de l'espace.</p>
             <div className='flex justify-center mt-10 mx-10'>
                 <img className='max-w rounded-3xl mb-8 ' src={pdj.url} alt={pdj.title} />
             </div>
-            <p className='mx-12 text-start text-lg pb-8'>{pdj.explanation}</p>
+            <p className='xs:mx-4 sm:mx-12 text-start xs:text-md midxs:text-lg pb-8'>{pdj.explanation}</p>
         </div>
         </div>
     );

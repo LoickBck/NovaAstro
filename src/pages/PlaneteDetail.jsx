@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import PlanetImages from '../components/PlanetImages';
+import PlaneteImages from '../components/PlaneteImages';
 import { getPlanetFacts } from '../components/Facts';
 import { motion } from 'framer-motion'
 
@@ -22,16 +22,16 @@ function PlanetDetail() {
         transition={{duration: 2}}
         >
             <h1 className='text-center text-4xl mt-20'>{planetName}</h1>
-            <div className="flex justify-center my-4">
-                <img src={imageUrl} alt={`Planete :  ${planetName}`} className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
+            <div className="flex justify-center my-4 xs:mx-8 midxs:mx-0">
+                <img src={imageUrl} alt={`Planete :  ${planetName}`} className="max-w-[300px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
             </div>
-            <p className='text-center text-lg mt-4 mx-64'>{description}</p>
-            <div className="flex flex-col items-center mt-12">
-                <div className="w-full max-w-5xl">
-                    <table className="min-w-full leading-normal">
+            <p className='text-center text-lg mt-8 xs:mx-12 md:mx-32 xl:mx-64'>{description}</p>
+            <div className="flex justify-center items-center mx-16 mt-12">
+                <div className="w-full max-w-[80rem]">
+                    <table className="w-full leading-normal">
                         <thead>
                             <tr>
-                                <th className="px-5 py-3 border-b-2 border-gray-900 bg-gray-900 text-left text-xs font-semibold text-gray-100 uppercase tracking-wider">
+                                <th className="px-5 py-3 border-b-2 border-indigo-400 bg-indigo-400 text-left text-xs font-semibold text-gray-100 uppercase tracking-wider">
                                     Faits Intéressants
                                 </th>
                             </tr>
@@ -39,7 +39,7 @@ function PlanetDetail() {
                         <tbody>
                             {funFacts.map((fact, index) => (
                                 <tr key={index}>
-                                    <td className="px-5 py-2 border border-gray-800 text-sm">
+                                    <td className="px-5 py-3 border border-indigo-400 text-sm">
                                         {fact}
                                     </td>
                                 </tr>
@@ -49,7 +49,7 @@ function PlanetDetail() {
                 </div>
             </div>
             <h2 className='text-center text-2xl mt-8 mb-12'>Images en rapport avec la planète {planetName}</h2>
-            <PlanetImages planetName={englishName || planetName} />
+            <PlaneteImages planetName={englishName || planetName} />
         </motion.div>
     );
 }
