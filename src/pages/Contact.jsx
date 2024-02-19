@@ -19,7 +19,7 @@ function Contact() {
             <form action="" method="">
             <div className="mb-5">
                 <label
-                for="name"
+                htmlFor="name"
                 className="mb-3 block text-base font-medium text-indigo-400"
                 >
                 Nom Complet
@@ -34,7 +34,7 @@ function Contact() {
             </div>
             <div className="mb-5">
                 <label
-                for="email"
+                htmlFor="email"
                 className="mb-3 block text-base font-medium text-indigo-400"
                 >
                 Mail
@@ -49,7 +49,7 @@ function Contact() {
             </div>
             <div className="mb-5">
                 <label
-                for="subject"
+                htmlFor="subject"
                 className="mb-3 block text-base font-medium text-indigo-400"
                 >
                 Objet
@@ -64,7 +64,7 @@ function Contact() {
             </div>
             <div className="mb-5">
                 <label
-                for="message"
+                htmlFor="message"
                 className="mb-3 block text-base font-medium text-indigo-400"
                 >
                 Message
