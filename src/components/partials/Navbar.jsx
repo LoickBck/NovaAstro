@@ -78,7 +78,7 @@ function Navbar() {
                 </div>
             </div>
 
-            <div className={`fixed top-0 left-0 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out bg-gray-800 text-white w-56 min-h-screen overflow-y-auto z-50`} ref={sidebarRef}>
+            <div className={`fixed top-0 left-0 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out bg-gray-700 text-white w-56 min-h-screen overflow-y-auto z-50`} ref={sidebarRef}>
                 <div className="p-5">
                     <h2 className="text-2xl font-semibold flex flex-row items-center">Nova <IoMdPlanet className='text-3xl mx-2' /> - Menu</h2>
                     <ul className="mt-6">
