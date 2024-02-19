@@ -59,7 +59,7 @@ function PlanetsExplorer() {
             }}>
                 {planets.map((planet) => (
                     <SplideSlide key={planet.id}>
-                        <div className="mt-10 min-h-96 mb-10 hover:scale-110 border border-indigo-400 rounded-lg shadow-xl">
+                        <div className="mt-10 min-h-96 mb-10 xs:hover:scale-100 lg:hover:scale-110 border border-indigo-400 rounded-lg shadow-xl">
                             <img className="rounded-t-lg w-full h-full object-cover" src={planet.image} alt={planet.name} />
                             <div className="bg-black rounded-b-lg p-5">
                                 <h5 className="mb-8 text-2xl font-bold text-center text-gray-200">{planet.name}</h5>

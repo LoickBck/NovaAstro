@@ -80,18 +80,17 @@ function Navbar() {
 
             <div className={`fixed top-0 left-0 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out bg-gray-700 text-white w-56 min-h-screen overflow-y-auto z-50`} ref={sidebarRef}>
                 <div className="p-5">
-                    <h2 className="text-2xl font-semibold flex flex-row items-center">Nova <IoMdPlanet className='text-3xl mx-2' /> - Menu</h2>
-                    <ul className="mt-6">
+                    <h2 className="text-3xl font-semibold flex flex-row items-center"><p className='text-indigo-400'>Nova</p> Astro<IoMdPlanet size={40} className='ml-2' /></h2>
+                    <ul className="mt-6 text-2xl">
                         <li className="mb-3"><Link onClick={handleLinkClick} to="/" className="block hover:text-indigo-400">Home</Link></li>
                         <li className="mb-3">
-                            <div className='flex flex-row hover:text-indigo-400 w-full text-left items-center'>
-                            <button onClick={togglePlanetsMenu} className="block">Planètes</button>
-                            <FaSpaceShuttle className='ml-2' />
+                            <div className=' hover:text-indigo-400 w-full text-left items-center'>
+                            <button onClick={togglePlanetsMenu} className="flex flex-row items-center">Planètes<FaSpaceShuttle className='ml-2' /></button>
                             </div>
                             {isPlanetsMenuOpen && (
                                 <ul className="mt-2">
                                     {planets.map((planet, index) => (
-                                        <li key={index} className="mb-2">
+                                        <li key={index} className="mb-2 text-xl">
                                             <Link onClick={handleLinkClick} state={{imageUrl: planet.image }} to={planet.path} className="block hover:text-indigo-400 pl-4">{planet.name}</Link>
                                         </li>
                                     ))}
