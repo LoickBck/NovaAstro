@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import PlanetImages from '../components/PlanetImages';
 import { getPlanetFacts } from '../components/Facts';
+import { motion } from 'framer-motion'
 
 function PlanetDetail() {
     // Récupération du nom de la planète de l'URL ou de l'état de navigation
@@ -14,7 +15,12 @@ function PlanetDetail() {
     const { description, funFacts } = getPlanetFacts(planetName);
 
     return (
-        <div>
+        <motion.div
+        animate={{opacity: 1}}
+        initial={{opacity: 0}}
+        exit={{opacity: 1}}
+        transition={{duration: 2}}
+        >
             <h1 className='text-center text-4xl mt-20'>{planetName}</h1>
             <div className="flex justify-center my-4">
                 <img src={imageUrl} alt={`Planete :  ${planetName}`} className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
@@ -44,7 +50,7 @@ function PlanetDetail() {
             </div>
             <h2 className='text-center text-2xl mt-8 mb-12'>Images en rapport avec la planète {planetName}</h2>
             <PlanetImages planetName={englishName || planetName} />
-        </div>
+        </motion.div>
     );
 }
 

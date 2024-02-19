@@ -1,9 +1,15 @@
 import React from 'react';
 import { MdMailOutline } from "react-icons/md";
+import { motion } from 'framer-motion'
 
 function Contact() {
   return (
-    <div className='mt-20'>
+    <motion.div className='mt-20'
+    animate={{opacity: 1}}
+    initial={{opacity: 0}}
+    exit={{opacity: 1}}
+    transition={{duration: 2}}
+    >
         <div className='flex flex-row items-center ml-20'>
             <h1 className='flex flex-row items-center ml-20 text-4xl font-medium'>Contact</h1>
             <MdMailOutline className='ml-4 text-5xl' />
@@ -81,7 +87,7 @@ function Contact() {
             </form>
         </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

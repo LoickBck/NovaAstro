@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Pages from './pages/Pages';
+import Home from './pages/Home';
 import PlanetDetail from './pages/PlaneteDetail'; 
 import Contact from './pages/Contact';
 import Nova from './pages/Nova';
@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Pages />} />
+        <Route path="/" element={<Home />} />
         <Route path="/planets/:planetName" element={<PlanetDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/nova" element={<Nova />} />

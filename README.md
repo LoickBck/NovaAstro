@@ -4,6 +4,8 @@ Animation à faire
 
 Partie responsive à améliorer
 
+Pas oublier les gifs sous la description
+
 ### `Difficultés rencontrées`
 
 1 : Avoir le nom en anglais lors de la requête vers l'API pour récupérer les images d'une planète.
@@ -19,3 +21,9 @@ Partie responsive à améliorer
 La clé de l'API se trouve dans un autre fichier pour qu'on ne puisse pas la récupérer.
 
 Dans la page qui affiche des éléments dynamiques, l'utilisateur est informé lorsqu'une erreur se produit pendant la récupération des images.
+
+### `Idée`
+
+Ajouter une section dans la page Home , ( au dessus ou en dessous des planètes) une barre de recherche qui affichera les images correspondantes.
+
+Ajouter des lunes , corps célestes en plus (à voir selon les délais (oublie pas CMS idiot))

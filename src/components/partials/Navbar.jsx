@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaSpaceShuttle } from "react-icons/fa";
+import { IoMdPlanet } from "react-icons/io";
 
 function Navbar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -12,11 +13,11 @@ function Navbar() {
         { name: "Vénus", path: "/planets/Venus",image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg" },
         { name: "Terre", path: "/planets/Terre",image: "https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/terre-1.png" },
         { name: "Uranus", path: "/planets/Uranus", image: "https://physicsworld.com/wp-content/uploads/2020/12/PIA18182.jpg" },
-        { name: "Mars", path: "/planets/Mars", image: "https://cnes.fr/sites/default/files/drupal/201607/image/is_mars.jpg" },
+        { name: "Mars", path: "/planets/Mars", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mars_Valles_Marineris_EDIT.jpg/1200px-Mars_Valles_Marineris_EDIT.jpg" },
         { name: "Jupiter", path: "/planets/Jupiter", image: "https://blog.cnes.fr/sites/default/files/styles/large/public/drupal/201811/image/je_systemesolaire_jupiter.png?itok=NN4jvZmx" },
-        { name: "Saturne", path: "/planets/Saturne", image: "https://img-4.linternaute.com/t-8nfUAHIigqKxuilOuVZ-EzuEg=/1080x/smart/6fcce0f97f9440dcaa893edbd38aa6e2/ccmcms-linternaute/34589040.jpg" },
+        { name: "Saturne", path: "/planets/Saturne", image: "https://pop.h-cdn.co/assets/17/38/1600x1600/square-1505749836-cassini-header.jpg" },
         { name: "Neptune", path: "/planets/Neptune", image: "https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2021/09/3-decouvertes-sur-neptune-ses-lunes.jpg" },
-        { name: "Soleil", path: "/planets/Soleil", image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Solar_prominence_from_STEREO_spacecraft_September_29%2C_2008.jpg" },
+        { name: "Soleil", path: "/planets/Soleil", image: "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001517/GSFC_20171208_Archive_e001517~thumb.jpg" },
     ];
 
     const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
@@ -51,26 +52,35 @@ function Navbar() {
             document.removeEventListener('click', closeSidebarIfOutsideClick);
         };
     }, [isSidebarOpen]); // Assurez-vous que l'effet se re-déclenche lorsque isSidebarOpen change
+
     
 
     return (
         <div className="bg-white">
             <div className="fixed top-0 left-0 w-full z-50 bg-black shadow">
                 <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                    <Link to="/">
-                    <h1 className="text-xl font-semibold">Nova Astro</h1>
+                    <Link to="/" className='flex flex-row items-center'>
+                        <h1 className="text-xl font-semibold text-white">Nova Astro</h1>
+                        <IoMdPlanet className='text-2xl ml-2' />
                     </Link>
-                    <button onClick={toggleSidebar} className="text-indigo-400 hover:text-indigo-200 focus:outline-none">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
+                    <div className="relative">
+                <button onClick={toggleSidebar} className="z-50 focus:outline-none">
+                    <div className="relative w-10 h-6 flex flex-col justify-between items-center mx-auto">
+                        {/* Barre du haut */}
+                        <div className={`h-1 w-[80%] bg-white transform transition duration-500 ease-in-out ${isSidebarOpen ? "rotate-45 translate-y-2.5" : "-translate-y-0.5"}`}></div>
+                        {/* Barre du milieu */}
+                        <div className={`h-1 w-[80%] bg-white transform transition duration-500 ease-in-out ${isSidebarOpen ? "opacity-0" : "opacity-100"}`}></div>
+                        {/* Barre du bas */}
+                        <div className={`h-1 w-[80%] bg-white transform transition duration-500 ease-in-out ${isSidebarOpen ? "-rotate-45 -translate-y-2.5" : "translate-y-0.5"}`}></div>
+                    </div>
+                </button>
+                    </div>
                 </div>
             </div>
 
             <div className={`fixed top-0 left-0 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out bg-gray-800 text-white w-56 min-h-screen overflow-y-auto z-50`} ref={sidebarRef}>
                 <div className="p-5">
-                    <h2 className="text-2xl font-semibold">Nova - Menu</h2>
+                    <h2 className="text-2xl font-semibold flex flex-row items-center">Nova <IoMdPlanet className='text-3xl mx-2' /> - Menu</h2>
                     <ul className="mt-6">
                         <li className="mb-3"><Link onClick={handleLinkClick} to="/" className="block hover:text-indigo-400">Home</Link></li>
                         <li className="mb-3">

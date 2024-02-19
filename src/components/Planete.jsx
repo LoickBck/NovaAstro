@@ -3,29 +3,30 @@ import { FaArrowRight } from "react-icons/fa";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 function PlanetsExplorer() {
     const [planets, setPlanets] = useState([]);
 
     useEffect(() => {
         const originalPlanetData = [
-            { id: 1, name: "Mercure",englishName: "Mercury", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_mercure-messenger.jpg", },
+            { id: 1, name: "Mercure",englishName: "Mercury", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_mercure-messenger.jpg", gif : "https://i.pinimg.com/originals/d7/aa/19/d7aa1904f0b961caef4e85eb0d38120b.gif" },
 
-            { id: 2, name: "Venus",englishName: "Venus", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg",},
+            { id: 2, name: "Venus",englishName: "Venus", image: "https://cnes.fr/sites/default/files/drupal/201511/image/is_venus-nasa.jpg", gif : "https://i.pinimg.com/originals/c5/b3/cc/c5b3cc8ad7bba4a5693bf44a4e93b6d3.gif"},
 
-            { id: 3, name: "Terre",englishName: "Earth", image: "https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/terre-1.png", },
+            { id: 3, name: "Terre",englishName: "Earth", image: "https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/terre-1.png", gif : "https://cdn.pixabay.com/animation/2022/11/13/07/16/07-16-41-513_512.gif" },
 
-            { id: 4, name: "Mars", image: "https://cnes.fr/sites/default/files/drupal/201607/image/is_mars.jpg", },
+            { id: 4, name: "Mars", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mars_Valles_Marineris_EDIT.jpg/1200px-Mars_Valles_Marineris_EDIT.jpg", gif : "https://i.makeagif.com/media/3-30-2017/__C4P2.gif" },
 
-            { id: 5, name: "Jupiter", image: "https://blog.cnes.fr/sites/default/files/styles/large/public/drupal/201811/image/je_systemesolaire_jupiter.png?itok=NN4jvZmx",},
+            { id: 5, name: "Jupiter", image: "https://blog.cnes.fr/sites/default/files/styles/large/public/drupal/201811/image/je_systemesolaire_jupiter.png?itok=NN4jvZmx", gif : "https://gifdb.com/images/high/universe-planet-jupiter-moon-3il50dr6r25gesvs.gif"},
 
-            { id: 6, name: "Saturne",englishName: "Saturn", image: "https://img-4.linternaute.com/t-8nfUAHIigqKxuilOuVZ-EzuEg=/1080x/smart/6fcce0f97f9440dcaa893edbd38aa6e2/ccmcms-linternaute/34589040.jpg",},
+            { id: 6, name: "Saturne",englishName: "Saturn", image: "https://pop.h-cdn.co/assets/17/38/1600x1600/square-1505749836-cassini-header.jpg",},
 
             { id: 7, name: "Uranus", image: "https://physicsworld.com/wp-content/uploads/2020/12/PIA18182.jpg",  },
 
             { id: 8, name: "Neptune",englishName: "Neptune", image: "https://www.science-et-vie.com/wp-content/uploads/scienceetvie/2021/09/3-decouvertes-sur-neptune-ses-lunes.jpg",},
 
-            { id: 9, name: "Soleil",englishName: "Sun", image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Solar_prominence_from_STEREO_spacecraft_September_29%2C_2008.jpg",},
+            { id: 9, name: "Soleil",englishName: "Sun", image: "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001517/GSFC_20171208_Archive_e001517~thumb.jpg",},
 
         ];
 
@@ -34,7 +35,12 @@ function PlanetsExplorer() {
     }, []);
 
     return (
-        <div className="m-16 mt-24">
+        <motion.div
+            animate={{opacity: 1}}
+            initial={{opacity: 0}}
+            exit={{opacity: 0}}
+            transition={{duration: 0.5}}
+        className="m-16 mt-24">
             <h3 className="text-2xl mb-12">Explorez le Système Solaire</h3>
             <Splide options={{ perPage: 3, arrows: true, pagination: false, drag: 'free', gap: '5rem' }}>
                 {planets.map((planet) => (
@@ -56,7 +62,7 @@ function PlanetsExplorer() {
                     </SplideSlide>
                 ))}
             </Splide>
-        </div>
+        </motion.div>
     );
 }
 
