@@ -31,8 +31,8 @@ function Recherche() {
   return (
     <div className='xs:m-4 md:m-16'>
         <h1 className='text-2xl mb-8'>L'Univers en images</h1>
-        <h2 className='text-lg'>Recherchez une gallerie d'images qui proviennent directement de la Nasa ! </h2>
-        <p className='text-md text-gray-400'>(les recherches sont plus pertinentes avec des mots anglais)</p>
+        <h2 className='text-lg'>Recherchez une galerie d'images provenant directement de la Nasa ! </h2>
+        <p className='text-md text-gray-400'>(Les résultats sont généralement plus pertinents avec des mots en anglais)</p>
     <div className='flex flex-col items-center justify-center xs:mt-8 lg:mt-0 xs:-p-4 lg:p-12'>
       <form onSubmit={handleSearch} className="flex midxs:flex-row xs:flex-col justify-center mb-10">
         <input
@@ -55,7 +55,6 @@ function Recherche() {
                 perPage: 3, 
                 arrows: true, 
                 pagination: false, 
-                drag: 'free', 
                 gap: '1rem',
                 breakpoints: {
                     280: { perPage: 1 }, // xs

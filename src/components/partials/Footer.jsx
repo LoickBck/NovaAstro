@@ -12,8 +12,7 @@ function Footer() {
         <h5 className="mb-2 font-bold uppercase text-indigo-400">explorer notre espace</h5>
 
         <p className="mb-4">
-        Embarquez pour l'aventure de votre vie et découvrez des secrets cachés
-            merveilleux. Votre voyage commence maintenant !
+        Embarquez pour l'aventure de votre vie et découvrez des secrets merveilleusement cachés. Votre voyage commence maintenant !
         </p>
         </div>
 
@@ -24,7 +23,7 @@ function Footer() {
             <span>© 2024 Copyright :</span>
 
             <a
-                className="font-semibold text-yellow-500"
+                className="font-semibold text-yellow-500 ml-2"
                 href="https://buckloick.com"
             >
                 Loick Buck

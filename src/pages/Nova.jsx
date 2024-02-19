@@ -19,7 +19,7 @@ function Nova() {
             Nous sommes une entreprise avant-gardiste dans le domaine de l'astronomie, offrant à ses clients des expériences uniques pour explorer les merveilles de l'univers. Notre mission est de rendre l'espace accessible à tous, en inspirant et en éduquant par le biais de technologies innovantes et d'événements captivants.</p>
             <Link
                 to="/"
-                className="bg-transparent hover:bg-indigo-400 text-indigo-400 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-indigo-400 hover:border-transparent">
+                className="z-10 bg-transparent hover:bg-indigo-400 text-indigo-400 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-indigo-400 hover:border-transparent">
                 Explorer</Link>
           </div>
           <div className="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">

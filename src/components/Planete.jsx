@@ -48,6 +48,7 @@ function PlanetsExplorer() {
                 pagination: false, 
                 drag: 'free', 
                 gap: '5rem',
+                snap: true, 
                 breakpoints: {
                     280: { perPage: 1 }, // xs
                     640: { perPage: 1 }, // sm
