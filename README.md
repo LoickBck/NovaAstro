@@ -1,10 +1,10 @@
 ### `NOTES`
 
-Partie responsive à améliorer
+L'application sert de projet pour mon développement personnel
 
 ### `Difficultés rencontrées`
 
-1 : Avoir le nom en anglais lors de la requête vers l'API pour récupérer les images d'une planète.
+1 : Les noms des planètes initialement en anglais renvoyait correctement le nom pour afficher les images, le titre, et pour structurer l'URL de la page de détails (PlaneteDetail.jsx). Mon problème était que je voulais faire mon projet en français et donc, afficher le nom des planètes en français. J'ai donc créer un état (planets) avec un tableau d'objets, chacun représentant une planète du système solaire. Chaque objet contient le nom de la planète en français (name) et le nom de la planète en anglais (englishName).Ce tableau est défini une seule fois au montage du composant grâce à l'effet déclenché par useEffect.s
 
 2 : Trouver une bonne configuration pour les images d'une planète ou de la mission Mars Rovers , car il y a beaucoup d'images. J'ai donc choisi un carousel avec un drag:free pour les versions mobiles surtout mais en gardant les flèches pour la navigation
 

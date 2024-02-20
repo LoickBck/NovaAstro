@@ -14,7 +14,12 @@ function PDJ() {
         fetchPDJ();
     }, []);
 
-    if (!pdj) return <div className='text-center text-3xl mt-10 ' >Chargement de la photo du jour...<ImSpinner9 className='animate-spin ml-4' /></div>;
+    if (!pdj) return (
+        <div className='flex flex-grow items-center'>
+        <div className='text-center text-3xl mt-10 ' >Chargement de la photo du jour...</div>
+        <ImSpinner9 className='animate-spin ml-4 text-3xl' />
+        </div>
+    );
 
     return (
         <div className='pt-8'>
